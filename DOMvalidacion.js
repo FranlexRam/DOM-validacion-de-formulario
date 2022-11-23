@@ -14,28 +14,37 @@ const validarFormulario = (e) => {
     
     switch (e.target.name) {
         
-        case usuario:
+        case 'usuario':
             if(expresiones.usuario.test(e.target.value)){
                 document.getElementById('grupo__usuario').classList.remove('formulario__grupo-incorrecto');
                 document.getElementById('grupo__usuario').classList.add('formulario__grupo-correcto');
+                document.querySelector('#grupo__usuario i').classList.add('fa-circle-check');
+                document.querySelector('#grupo__usuario i').classList.remove('fa-circle-xmark');
+                document.querySelector('#grupo__usuario .formulario__input-error').classList.remove('formulario__input-error-activo');
+                
             } else {
                 document.getElementById('grupo__usuario').classList.add('formulario__grupo-incorrecto');
+                document.getElementById('grupo__usuario').classList.remove('formulario__grupo-correcto');
+                document.querySelector('#grupo__usuario i').classList.add('fa-circle-xmark');
+                document.querySelector('#grupo__usuario i').classList.remove('fa-circle-check');
+                document.querySelector('#grupo__usuario .formulario__input-error').classList.add('formulario__input-error-activo');
+                
             }
             
             break;
-        case nombre:
+        case 'nombre':
             
             break;
-        case password:
+        case 'password':
             
             break;
-        case password2:
+        case 'password2':
             
             break;
-        case correo:
+        case 'correo':
             
             break;
-        case telefono:
+        case 'telefono':
             
             break;
         

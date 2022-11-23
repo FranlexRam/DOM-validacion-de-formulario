@@ -73,7 +73,7 @@ main {
 .formulario__validacion-estado {
   position: absolute;
   right: 10px;
-  bottom: 10px;
+  bottom: 13px;
   z-index: 100;/*Para asegurar que este por encima de todos los elementos*/
   font-size: 16px;
   opacity: 0;
