@@ -3,15 +3,15 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
     usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, //Letras, numeros, guion y guion bajo. De 4 a 16 digitos.
-    nombre: /^[a-zA-ZÀ-Ý\s]{1,40}$/, //Letras y espacios, pueden llevar acentos.
+    nombre: /^[a-zA-ZÀ-Ý\s]{2,40}$/, //Letras y espacios, pueden llevar acentos.
     password: /^.{4,15}$/, //De 4 a 12 digitos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    telefono: /^\d{7,14}$/ //De 7 a 14 numeros.
+    telefono: /^\d{11}$/ //De 7 a 14 numeros.
 }
 
 const campos = {
     usuario: false,
-    nombrepassword: false,
+    nombre: false,
     password: false,
     correo: false,
     telefono: false  //NO se coloca coma (,) al ultimo elemento del objecto.
@@ -119,6 +119,7 @@ formulario.addEventListener('submit', (e) =>{
         document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
             icono.classList.remove('formulario__grupo-correcto');
         });
+
 
     } else {
         document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');

@@ -182,6 +182,7 @@ main {
 .formulario__mensaje,
 .formulario__grupo-btn-enviar {
   grid-column: span 1;
+  font-size: 10px;
 }
 
 .formulario__btn {
